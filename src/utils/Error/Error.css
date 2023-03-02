@@ -1,0 +1,15 @@
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(231, 90, 90);
+    z-index: 120;
+}
+.error h1{
+    color: rgb(84, 3, 3);
+}
