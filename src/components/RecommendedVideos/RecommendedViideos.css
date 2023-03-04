@@ -1,31 +1,16 @@
-.recommnededVideos{
+.recommnededVideos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px 10px;
     position: absolute;
-    top: 80px;
+    top: 120px;
     right: 20px;
 }
-.recommnededVideos-1{
-    width: 83%; 
+
+.recommnededVideos-1 {
+    width: 83%;
 }
-.recommnededVideos-2{
+
+.recommnededVideos-2 {
     width: 90%;
-}
-
-.videos img{
-    border-radius: 10px;
-    cursor: pointer;
-}
-.videos h4{
-    padding: 10px;
-}
-
-.videos-1 img{
-    width: 310px;
-    height: 220px;
-}
-.videos-2 img{
-    width: 330px;
-    height: 235px;
 }

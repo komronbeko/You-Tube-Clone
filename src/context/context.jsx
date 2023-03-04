@@ -7,6 +7,13 @@ const ContextProvider = ({children}) => {
     const [error, setError] = useState(null);
     const [sideBar, setSideBar] = useState(false);
     const [systemsToggle, setSystemsToggle] = useState(false);
+    const [theme, setTheme] = useState(true);
+
+
+    const relatedToTheme = {
+      setTheme,
+      theme
+    }
 
     const relatedToSidebar = {
       setSideBar,
@@ -25,7 +32,7 @@ const ContextProvider = ({children}) => {
     }
 
   return (
-    <ContextApi.Provider value={{state, relatedToSidebar, relatedToSystems}}>
+    <ContextApi.Provider value={{state, relatedToSidebar, relatedToSystems, relatedToTheme}}>
         {children}
     </ContextApi.Provider>
   )

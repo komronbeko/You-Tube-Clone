@@ -2,15 +2,17 @@ import React, { useContext } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
-import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+
 
 import "./Header.css";
 import myImage from "../../assets/_MG_8554 (2).jpg";
 import { ContextApi } from "../../context/context";
 
 export function Header() {
-  const { relatedToSidebar,relatedToSystems } = useContext(ContextApi);
+  const { relatedToSidebar,relatedToSystems, relatedToTheme } = useContext(ContextApi);
+  const setTheme = relatedToTheme.setTheme;
   return (
     <div className="header">
       <div className="container header__container">
@@ -32,9 +34,9 @@ export function Header() {
         </div>
 
         <div className="header__right">
-          <VideoCallIcon className="header__icon iconsInOne" />
-          <AppsIcon className="header__icon iconsInOne" />
-          <NotificationsIcon className="header__icon iconsInOne" />
+          <DarkModeIcon className="header__icon iconsInOne" onClick={()=>setTheme(prev => !prev)}/>
+          <VideoCallIcon  className="header__icon iconsInOne" />
+          <NotificationsIcon  className="header__icon iconsInOne" />
           <img
             alt="Olimov Komronbek"
             src={myImage}
